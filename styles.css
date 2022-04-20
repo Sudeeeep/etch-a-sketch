@@ -13,3 +13,23 @@ body {
 .title {
   text-align: center;
 }
+
+.main {
+  display: flex;
+}
+
+.grid-container {
+  width: 60vw;
+  height: 80vh;
+  margin: 50px auto;
+  border: 1px solid black;
+  display: grid;
+}
+
+.controls {
+  display: flex;
+  width: 10vw;
+  gap: 1em;
+  padding: 1em;
+  flex-direction: column;
+}
