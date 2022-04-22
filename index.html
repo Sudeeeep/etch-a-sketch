@@ -15,15 +15,21 @@
     <h1 class="title">ETCH A SKETCH</h1>
     <div class="main">
         <div class="controls">
-            <label for="size"> Size:</label>
-            <input id="size" type="number" min="0" max="100" value="10">
-            <input id="submit" type="submit" value="Enter">
-            <input id="reset" type="button" value="Reset">
-            <label for="color">Select Color</label>
-            <input type="color" id="color-btn">
+            <div class="size-container">
+                <label for="size"> Size:</label>
+                <input id="size" type="number" min="0" max="100" value="10">
+                <input id="submit" type="submit" value="Enter">
+                <input id="reset" type="button" value="Reset">
+            </div>
+            <div class="color-container">
+                <label for="color">Select Color:</label>
+                <input type="color" id="color-btn">
+                <h4>Use Right Click to Erase</h4>
+            </div>
         </div>
         <div class="grid-container"></div>
     </div>
+
 
 
 </body>

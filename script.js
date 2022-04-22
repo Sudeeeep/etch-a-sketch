@@ -1,9 +1,17 @@
 let gridChild, color = "#000000";
 
 const gridContainer = document.querySelector(".grid-container");
-const n = document.getElementById("size");
-const enterBtn = document.getElementById("submit");
-const colorBtn = document.getElementById("color-btn");
+const body = document.querySelector("body");
+const n = document.querySelector("#size");
+const enterBtn = document.querySelector("#submit");
+const resetBtn = document.querySelector("#reset");
+const colorBtn = document.querySelector("#color-btn");
+
+createGrid(10);
+
+body.oncontextmenu = () => {
+    return false
+};
 
 enterBtn.addEventListener("click", () => createGrid(n.value));
 
@@ -11,6 +19,9 @@ colorBtn.addEventListener("input", (e) => {
     color = e.target.value;
     return color;
 });
+
+resetBtn.addEventListener("click", reset);
+
 
 function createGrid(n) {
 
@@ -26,6 +37,7 @@ function createGrid(n) {
         gridChild.style.cssText =
             `border: 0.5px solid black;`
         gridChild.addEventListener("mouseover", colorFill);
+        gridChild.addEventListener("contextmenu", (e) => e.target.style.backgroundColor = "white");
     }
 
 }
@@ -39,4 +51,8 @@ function removeGrid(node) {
 
 function colorFill(e) {
     e.target.style.backgroundColor = color;
+}
+
+function reset() {
+    window.location.reload();
 }

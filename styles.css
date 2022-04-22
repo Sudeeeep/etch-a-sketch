@@ -14,8 +14,16 @@ body {
   text-align: center;
 }
 
-.main {
+.main,
+.size-container,
+.color-container {
   display: flex;
+}
+
+.size-container,
+.color-container {
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 .grid-container {
